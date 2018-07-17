@@ -34,7 +34,7 @@ Two simple examples are the plasmodium species *P. falciparum* and *P. knowlesi*
 ```
 <p align="center">
 <a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/plas1_genomic.pdf">
-<img src="plas1_genomic.pdf" height="400px" width="400px">
+<img src="plas1.pdf" height="400px" width="400px">
 </a>
 </p>
 
@@ -44,7 +44,7 @@ Two simple examples are the plasmodium species *P. falciparum* and *P. knowlesi*
 ```
 <p align="center">
 <a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/plas_genomic.pdf">
-<img src="plas_genomic.pdf" height="400px" width="400px">
+<img src="plas.pdf" height="400px" width="400px">
 </a>
 </p>
 
