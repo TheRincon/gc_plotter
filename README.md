@@ -33,7 +33,7 @@ Two simple examples are the plasmodium species *P. falciparum* and *P. knowlesi*
 ./gc.sh /home/plasmodium_knowlesi_genomic.fna 10000
 ```
 <p align="center">
-<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/plas1_genomic.pdf">
+<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/plas1.pdf">
 <img src="plas1.pdf" height="400px" width="400px">
 </a>
 </p>
@@ -43,7 +43,7 @@ Two simple examples are the plasmodium species *P. falciparum* and *P. knowlesi*
 ./gc.sh /home/plasodium_falciparum_genomic.fna 10000
 ```
 <p align="center">
-<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/plas_genomic.pdf">
+<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/plas.pdf">
 <img src="plas.pdf" height="400px" width="400px">
 </a>
 </p>
