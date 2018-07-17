@@ -3,7 +3,7 @@ gc_plotter
 
 ## Simple tool to map GC content on ideograms for chromosomes or contigs.\
 
-Inspired by CMplot (with some code used)[CMplot](https://github.com/YinLiLin/R-CMplot)
+Inspired by [CMplot](https://github.com/YinLiLin/R-CMplot)
 <br>
 The Unix commands for creating GC content tracks also have been taken from [here](https://wiki.bits.vib.be/index.php/Create_a_GC_content_track)
 
