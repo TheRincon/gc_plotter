@@ -1,7 +1,7 @@
 gc_plotter
 =========
 
-## Simple tool to map GC content on ideograms for chromosomes or contigs.\
+## Simple tool to map GC content on ideograms for chromosomes or contigs
 
 Inspired by (and some code taken from) [CMplot](https://github.com/YinLiLin/R-CMplot)
 <br>
@@ -30,6 +30,7 @@ Two simple examples are the plasmodium species *P. falciparum* and *P. knowlesi*
 
 *P. falsiparum* is well-known as very [AT rich] (https://genomevolution.org/wiki/index.php/Plasmodia_comparative_genomics) and GC poor genome. While *P. knowlesi* is still AT rich, but much less rich than the falciparum. We can plot these and see if we get the expected results.
 
+---
 ```bash
 ./gc.sh /home/plasmodium_knowlesi_genomic.fna 10000
 ```
@@ -39,7 +40,7 @@ Two simple examples are the plasmodium species *P. falciparum* and *P. knowlesi*
 </a>
 </p>
 
-
+---
 ```bash
 ./gc.sh /home/plasodium_falciparum_genomic.fna 10000
 ```
@@ -55,6 +56,6 @@ As we can see we see lots of red for *falicaprum* indicating that yes, it seems 
 
 ### Hints
 
-The legend can be freely changed, simply replace "topright" or "bottomright" on the last line in gcplot.r to another location or coordinates. 
+The legend can be freely changed, simply replace "topright" or "bottomright" on the last line in gcplot.r to another location or coordinates. The colors can easily be changed within the Rscript. Finally, the range for legend and colors can also be modified. 
 
 If grey boxes appear in the plot, the bin is probably too high (around 50k is seems to fail). It will require modification, as I usually work with fungal genomes of about 15-100Mb, so it is optimized for this range. 
