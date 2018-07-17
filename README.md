@@ -28,7 +28,7 @@ Then run the script with 2 arguments, first is the reference genome fasta and th
 
 Two simple examples are the plasmodium species *P. falciparum* and *P. knowlesi*
 
-*P. falsiparum* is well-known as very [AT rich] (https://genomevolution.org/wiki/index.php/Plasmodia_comparative_genomics) and GC poor genome. While *P. knowlesi* is still AT rich, but much less rich than the falciparum. We can plot these and see if we get the expected results.
+*P. falsiparum* is well-known as very [AT rich](https://genomevolution.org/wiki/index.php/Plasmodia_comparative_genomics) and GC poor genome. While *P. knowlesi* is still AT rich, but much less rich than the falciparum. We can plot these and see if we get the expected results.
 
 ---
 ```bash
