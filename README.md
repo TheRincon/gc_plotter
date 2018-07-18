@@ -11,7 +11,7 @@ The Unix commands for creating GC content tracks also have been taken from [here
 
 ### Run
 
-# You must have bedtools, samtools and basic unix utils installed
+#### You must have bedtools, samtools and basic unix utils installed
 
 Simply change the script to executable
 
