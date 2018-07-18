@@ -1,7 +1,5 @@
 #!/bin/bash
 
-file_p=$1
-
 # index for order
 samtools faidx $1
 
