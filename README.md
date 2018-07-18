@@ -1,7 +1,7 @@
 gc_plotter
 =========
 
-## Simple tool to map GC content on ideograms for chromosomes or contigs using existing tools
+## Simple tool to map GC bins on chromosome ideograms with existing tools
 
 Inspired by (and code taken from) [CMplot](https://github.com/YinLiLin/R-CMplot)
 <br>
