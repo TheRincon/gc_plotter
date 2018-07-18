@@ -23,12 +23,12 @@ Then run the script with 2 arguments, first is the reference genome fasta and th
 ```bash
 ./gc /home/reference.fasta 1000
 ```
-The following files will be created in the directory which has the reference genome
+The following files will be created in the directory which has the reference genome:
 
-".sizes" &nbsp;&nbsp;&nbsp;&nbsp;file which specifies all the chromosomes/scaffolds and the lengths in basepairs <br>
-".bed" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        a bed file <br>
-".fai"   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      fasta index from samtools <br>
-".igv"   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      igv viewer file with positions, bins, and gc content. Output file needed for gc_plotter<br>
+".sizes" &nbsp;&nbsp;&nbsp;&nbsp;f  ile which specifies all the chromosomes/scaffolds and the lengths in basepairs <br>
+".bed"   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  bed file <br>
+".fai"   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  fasta index from samtools <br>
+".igv"   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    igv viewer file with positions, bins, and gc content. Output file needed for gc_plotter<br>
 
 ---
 
