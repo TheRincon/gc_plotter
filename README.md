@@ -30,12 +30,14 @@ Two simple examples are the plasmodium species *P. falciparum* and *P. knowlesi*
 
 *P. falsiparum* is well-known as very [AT rich](https://genomevolution.org/wiki/index.php/Plasmodia_comparative_genomics) and GC poor genome. While *P. knowlesi* is still AT rich, but much less rich than the falciparum. We can plot these and see if we get the expected results.
 
+The genomes were downloaded from [ncbi](https://www.ncbi.nlm.nih.gov/genome/?term=txid1245013[Organism:noexp]) and used as is, except for a renaming. 
+
 ```bash
 ./gc.sh /home/plasmodium_knowlesi_genomic.fna 10000
 ```
 <p align="center">
 <a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/plas1.jpg">
-<img src="plas1.jpg" height="400px" width="400px">
+<img src="plas1.jpg" height="800px" width="800px">
 </a>
 </p>
 
@@ -47,7 +49,7 @@ Same for the second genome:
 ```
 <p align="center">
 <a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/plas.jpg">
-<img src="plas.jpg" height="400px" width="400px">
+<img src="plas.jpg" height="800px" width="800px">
 </a>
 </p>
 
