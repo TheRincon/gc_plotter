@@ -25,10 +25,10 @@ Then run the script with 2 arguments, first is the reference genome fasta and th
 ```
 The following files will be created in the directory which has the reference genome
 
-".sizes"       file which specifies all the chromosomes/scaffolds and the lengths in basepairs
-".bed"         a bed file
-".fai"         fasta index from samtools
-".igv"         igv viewer file with positions, bins, and gc content. Output file needed for gc_plotter 
+".sizes"       file which specifies all the chromosomes/scaffolds and the lengths in basepairs <br>
+".bed"         a bed file <br>
+".fai"         fasta index from samtools <br>
+".igv"         igv viewer file with positions, bins, and gc content. Output file needed for gc_plotter<br>
 
 ---
 
