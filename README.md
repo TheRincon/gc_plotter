@@ -65,6 +65,20 @@ As we can see, there is lots of red for *falicaprum* indicating that yes, it see
 
 ---
 
+We can also try a stlightly larger genome to see if it scales:
+
+```bash
+./gc.sh /home/arabidopsis_thaliana_genomic.fna 10000
+```
+
+<p align="center">
+<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/arabidopsis.jpg">
+<img src="arabidopsis.jpg" height="800px" width="800px">
+</a>
+</p>
+
+---
+
 ### Hints
 
 The legend can be freely changed, simply replace "topright" or "bottomright" on the last line in gcplot.r to another location or coordinates. The colors can easily be changed within the Rscript. Finally, the range for legend and colors can also be modified. 
