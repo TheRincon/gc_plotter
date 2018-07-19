@@ -87,7 +87,7 @@ if(length(zzz.xy.index) != 0){
 chr.num <- rev(chr.num)
 
 if(plot)	mtext(at=seq(band, length(chr.num) * band, band),text=paste(chr.num, sep=""), side=2, las=2, font=1, cex=0.6, line=0.2)
-if(plot)	axis(3, at=seq(0, chorm.maxlen, length=10), labels=c(NA, paste(round((seq(0, chorm.maxlen, length=10))[-1] / 1e6, 0), "Mb", sep="")),
+if(plot)	axis(3, at=seq(0, chorm.maxlen, length=5), labels=c(NA, paste(round((seq(0, chorm.maxlen, length=5))[-1] / 1e3, 0), "Kb", sep="")),
               font=1, cex.axis=0.8, tck=0.01, lwd=2, padj=1.2)
 
 # Make legend not so large, yet informative
@@ -98,7 +98,7 @@ legend.y.col <- legend.y
 legend.col <- col[seq(10,90,5)]
 
 # plot legend
-if(plot)	legend("bottomright", title="", legend=legend.y, pch=15, pt.cex = legend.pt.cex, col=legend.col,
+if(plot)	legend("topright", title="", legend=legend.y, pch=15, pt.cex = legend.pt.cex, col=legend.col,
                 cex=legend.cex, bty="n", y.intersp=legend.y.intersp, x.intersp=legend.x.intersp, yjust=0, xjust=0, xpd=TRUE)
 
 
