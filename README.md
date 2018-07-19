@@ -11,6 +11,8 @@ The Unix commands for creating GC content tracks also have been taken from [here
 
 ### Run
 
+#### You must have bedtools, samtools and basic unix utils installed
+
 Simply change the script to executable
 
 ```bash
@@ -21,6 +23,12 @@ Then run the script with 2 arguments, first is the reference genome fasta and th
 ```bash
 ./gc /home/reference.fasta 1000
 ```
+The following files will be created in the directory which has the reference genome:
+
+".sizes" &nbsp;&nbsp;&nbsp; file which specifies all the chromosomes/scaffolds and the lengths in basepairs <br>
+".bed"   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  bed file <br>
+".fai"   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  fasta index from samtools <br>
+".igv"   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; igv viewer file with positions, bins, and gc content. Output file needed for gc_plotter<br>
 
 ---
 
@@ -28,7 +36,7 @@ Then run the script with 2 arguments, first is the reference genome fasta and th
 
 Two simple examples are the plasmodium species *P. falciparum* and *P. knowlesi*
 
-*P. falsiparum* is well-known as very [AT rich](https://genomevolution.org/wiki/index.php/Plasmodia_comparative_genomics) and GC poor genome. While *P. knowlesi* is still AT rich, but much less rich than the falciparum. We can plot these and see if we get the expected results.
+*P. falsiparum* is well-known as a very [AT rich](https://genomevolution.org/wiki/index.php/Plasmodia_comparative_genomics) and GC poor genome. While *P. knowlesi* is still AT rich, but much less rich than *falciparum*. We can plot these and see if we get the expected results.
 
 The genomes were downloaded from [ncbi](https://www.ncbi.nlm.nih.gov/genome/?term=txid1245013[Organism:noexp]) and used as is, except for a renaming. 
 
