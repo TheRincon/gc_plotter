@@ -108,7 +108,7 @@ legend.y.col <- legend.y
 legend.col <- col[seq(10,90,5)]
 
 # plot legend
-if(plot)	legend("bottomright", title="", legend=legend.y, pch=15, pt.cex = legend.pt.cex, col=legend.col,
+if(plot)	legend("bottomright", title="GC %", legend=legend.y, pch=15, pt.cex = legend.pt.cex, col=legend.col,
                 cex=legend.cex, bty="n", y.intersp=legend.y.intersp, x.intersp=legend.x.intersp, yjust=0, xjust=0, xpd=TRUE)
 
 

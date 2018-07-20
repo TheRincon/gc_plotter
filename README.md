@@ -19,6 +19,9 @@ Simply change the script to executable
 chmod 755 gc.sh
 ```
 
+#### Linux
+Change the script from #!/bin/bash to /usr/bin/bash or appropriate shell. 
+
 Then run the script with 2 arguments, first is the reference genome fasta and the second is the desired width to scan for GC percenatge. 
 ```bash
 ./gc /home/reference.fasta 1000
