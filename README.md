@@ -64,7 +64,7 @@ Same for the second genome:
 </a>
 </p>
 
-As we can see, there is lots of red for *falicaprum* indicating that yes, it seems to be well within the 20's (23%), and *knowlesi* is around 40% as expected. 
+As we can see, there is lots of red for *falciparum* indicating that yes, it seems to be well within the 20's (23%), and *knowlesi* is around 40% as expected. 
 
 ---
 
@@ -87,3 +87,12 @@ We can also try a stlightly larger genome to see if it scales:
 The legend can be freely changed, simply replace "topright" or "bottomright" on the last line in gcplot.r to another location or coordinates. The colors can easily be changed within the Rscript. Finally, the range for legend and colors can also be modified. 
 
 If grey boxes appear in the plot, the bin is probably too high (around 50k is seems to fail). It will require modification, as I usually work with fungal genomes of about 15-100Mb, so it is optimized for this range. 
+
+---
+
+### To Do
+
+1. Make the legend more "publication worthy", as it looks very simple now. 
+2. Add circular plot. This is included with CMplot, but again I am just interested in GC density not SNPs. 
+3. Add "title" option. User will pass a third argument and this will be the title of the plot. 
+4. Make PNG or JPG, not just "Rplot.pdf"
