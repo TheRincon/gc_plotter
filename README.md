@@ -68,7 +68,7 @@ As we can see, there is lots of red for *falciparum* indicating that yes, it see
 
 ---
 
-We can also try a stlightly larger genome to see if it scales:
+We can also try a slightly larger genome to see if it scales:
 
 ```bash
 ./gc.sh /home/arabidopsis_thaliana_genomic.fna 10000
@@ -86,7 +86,7 @@ We can also try a stlightly larger genome to see if it scales:
 
 The legend can be freely changed, simply replace "topright" or "bottomright" on the last line in gcplot.r to another location or coordinates. The colors can easily be changed within the Rscript. Finally, the range for legend and colors can also be modified. 
 
-If grey boxes appear in the plot, the bin is probably too high (around 50k is seems to fail). It will require modification, as I usually work with fungal genomes of about 15-100Mb, so it is optimized for this range. 
+If grey boxes appear in the plot, the bin is probably too high (around 50k or over is seems to fail). It will require modification, as I usually work with fungal genomes of about 15-100Mb, so it is optimized for this range. 
 
 ---
 
@@ -96,3 +96,4 @@ If grey boxes appear in the plot, the bin is probably too high (around 50k is se
 2. Add circular plot. This is included with CMplot, but again I am just interested in GC density not SNPs. 
 3. Add "title" option. User will pass a third argument and this will be the title of the plot. 
 4. Make PNG or JPG, not just "Rplot.pdf"
+5. Gene density plots? 
