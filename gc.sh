@@ -15,4 +15,15 @@ bedtools nuc -fi $1 -bed $1_$2bps.bed > $1_nuc.txt
 # gwak and print only the bases we need in nice way
 gawk -v w=$2 'BEGIN{FS="\t"; OFS="\t"} { if (FNR>1) {print $1,$2,$3,"GC_pc"w"bps",$5} }' $1_nuc.txt > $1_$2bps.igv
 
-Rscript gcplot.r $1_$2bps.igv $2
+# horizontal ideograms   ->  Rscript gcplot.r test.fasta_1000bps.igv 1000
+if [ $3 = "d" ]
+then
+	Rscript gcplot.r $1_$2bps.igv $2
+fi
+
+# circular plot   ->  Rscript cirplot.r test.fasta_10000bps.igv 10000 jpg 0.5
+if [ $3 = "c" ]
+then
+	Rscript cirplot.r $1_$2bps.igv $2 $4 $5
+fi
+

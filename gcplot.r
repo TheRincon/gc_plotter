@@ -86,7 +86,7 @@ if(length(zzz.xy.index) != 0){
 
 chr.num <- rev(chr.num)
 
-if(chorm.maxlen > 10000000) {
+if (chorm.maxlen > 10000000) {
   top_axis_length <- 10
   kilo_or_mega <- 1e6    # mega
   text_size <- "Mb"
