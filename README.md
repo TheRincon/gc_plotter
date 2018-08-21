@@ -44,11 +44,11 @@ Two simple examples are the plasmodium species *P. falciparum* and *P. knowlesi*
 The genomes were downloaded from [ncbi](https://www.ncbi.nlm.nih.gov/genome/?term=txid1245013[Organism:noexp]) and used as is, except for a renaming. 
 
 ```bash
-./gc.sh /home/plasmodium_knowlesi_genomic.fna 10000
+./gc.sh /home/plasmodium_knowlesi_genomic.fna 10000 d jpg
 ```
 <p align="center">
-<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/plas1.jpg">
-<img src="plas1.jpg" height="800px" width="800px">
+<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/figures/plas1.jpg">
+<img src="figures/plas1.jpg" height="800px" width="800px">
 </a>
 </p>
 
@@ -56,11 +56,11 @@ The genomes were downloaded from [ncbi](https://www.ncbi.nlm.nih.gov/genome/?ter
 Same for the second genome:
 
 ```bash
-./gc.sh /home/plasodium_falciparum_genomic.fna 10000
+./gc.sh /home/plasodium_falciparum_genomic.fna 10000 d jpg
 ```
 <p align="center">
-<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/plas.jpg">
-<img src="plas.jpg" height="800px" width="800px">
+<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/figures/plas.jpg">
+<img src="figures/plas.jpg" height="800px" width="800px">
 </a>
 </p>
 
@@ -71,20 +71,44 @@ As we can see, there is lots of red for *falciparum* indicating that yes, it see
 We can also try a slightly larger genome to see if it scales:
 
 ```bash
-./gc.sh /home/arabidopsis_thaliana_genomic.fna 10000
+./gc.sh /home/arabidopsis_thaliana_genomic.fna 10000 d jpg
 ```
 
 <p align="center">
-<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/arabidopsis.jpg">
-<img src="arabidopsis.jpg" height="800px" width="800px">
+<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/figures/arabidopsis.jpg">
+<img src="figures/arabidopsis.jpg" height="800px" width="800px">
 </a>
 </p>
 
 ---
 
+### Circular Plot
+
+I have now added circular plots. It has an extended command on the terminal taking a hard-masked fasta. If you have a soft-masked fasta ("atcg" instead of "ATCG") then please run the "mask.py" script.
+
+```python
+python mask.py soft-masked.fasta
+```
+
+The full command line for the circular plot:
+```bash
+./gc.sh /home/knufia.genome.fasta 10000 c /home/Desktop/knufia.hard_masked.fasta
+```
+This will then genrate something like this:
+
+<p align="center">
+<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/figures/knufia_circ.png">
+<img src="figures/knufia_circ.png" height="800px" width="800px">
+</a>
+</p>
+
+The figure above is purposefully enlarged to show the small contigs, normally the spacing will not be so explicit on the legend. 
+
+---
+
 ### Hints
 
-The legend can be freely changed, simply replace "topright" or "bottomright" on the last line in gcplot.r to another location or coordinates. The colors can easily be changed within the Rscript. Finally, the range for legend and colors can also be modified. 
+The legend can be freely changed in the linear plot, simply replace "topright" or "bottomright" on the last line in gcplot.r to another location or coordinates. The colors can easily be changed within the Rscript under col (or col2 in case of the circular plot). 
 
 If grey boxes appear in the plot, the bin is probably too high (around 50k or over is seems to fail). It will require modification, as I usually work with fungal genomes of about 15-100Mb, so it is optimized for this range. 
 
@@ -93,7 +117,5 @@ If grey boxes appear in the plot, the bin is probably too high (around 50k or ov
 ### To Do
 
 1. Make the legend more "publication worthy", as it looks very simple now. 
-2. Add circular plot. This is included with CMplot, but again I am just interested in GC density not SNPs. 
-3. Add "title" option. User will pass a third argument and this will be the title of the plot. 
-4. Make PNG or JPG, not just "Rplot.pdf"
-5. Gene density plots? 
+2. Add "title" option. User will pass a third argument and this will be the title of the plot. 
+3. Gene density plots? 
