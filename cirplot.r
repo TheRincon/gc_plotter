@@ -2,10 +2,11 @@ args = commandArgs(trailingOnly=TRUE)
 
 new_dat <- read.csv(args[1], sep="\t", header=FALSE)
 n_dat <- new_dat[,c(1,2,5)]
-masked_dat <- read.csv(args[3], sep="\t", header=FALSE)
+masked_dat <- read.csv(args[4], sep="\t", header=FALSE)
 m_dat <- masked_dat[,6]
 
 bin_size <- as.numeric(args[2])
+
 # Assign Variables for plotting
 plot <- TRUE
 band <- 1
@@ -14,7 +15,7 @@ maxbin.num <- NULL
 bin <- bin_size
 R <- 1 # this will be changed to 2 when I plot repeats (masking n's)
 
-#Assuming %, this is for GC
+# Out of 100% 
 legend.max <- 100
 
 #Change colors here
@@ -38,7 +39,7 @@ cir.legend.cex <- 8.6
 cir.legend.col <- "black"
 LOG10 <- TRUE
 box <- FALSE
-file <- "jpg"    #output type -> "jpg", "png", "tiff"
+file <- args[3]
 dpi <- 300
 r <- 15.5
 H <- 1
@@ -46,11 +47,15 @@ cir.band <- 2
 Max <- 5
 cir.density <- TRUE
 
-# Fix this
-if(file=="jpg") jpeg(paste("Circular GC and Mask Plot.jpg"), width = 9*dpi,height=7*dpi,res=dpi,quality = 100)
-#if(file=="pdf") pdf(paste(paste("Circular GC and Mask Plot.pdf"), width = 9,height=7)
-#if(file=="tiff") tiff(paste("Circular GC and Mask Plot.tiff"), width = 9*dpi,height=7*dpi,res=dpi)
-#if(file=="png") jpeg(paste("Circular GC and Mask Plot.png")sep=""), width = 9*dpi,height=7*dpi,res=dpi,quality = 100)
+if (file=="jpg") {
+  jpeg(paste("Circular GC and Mask Plot.jpg"), width = 9*dpi,height=7*dpi,res=dpi,quality = 100) 
+} else if (file=="pdf") {
+  pdf(paste("Circular GC and Mask Plot.pdf"), width = 9,height=7)
+} else if (file=="tiff") {
+  tiff(paste("Circular GC and Mask Plot.tiff"), width = 9*dpi,height=7*dpi,res=dpi)
+} else {
+  png(paste("Circular GC and Mask Plot.png"), width = 9*dpi,height=7*dpi,res=dpi,quality = 100)
+}
 par(xpd=TRUE)
 
 # change from "0.525000" to "52", -- YES IT ROUNDS DOWN

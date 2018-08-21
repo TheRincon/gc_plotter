@@ -3,7 +3,6 @@
 
 args = commandArgs(trailingOnly=TRUE)
 
-
 new_dat <- read.csv(args[1], sep="\t", header=FALSE)
 n_dat <- new_dat[,c(1,2,5)]
 
@@ -11,8 +10,6 @@ n_dat <- new_dat[,c(1,2,5)]
 n_dat$V5 <- as.numeric(as.character(sub("0." , "", n_dat$V5)))
 n_dat$V5 <- substr(n_dat$V5, 0, 2)
 n_dat$V5 <- formatC(as.numeric(n_dat$V5),width=2,format='f',digits=0,flag='0')
-
-# make as matrix
 zzz <- as.matrix(n_dat)
 
 # check for NA and 0's
@@ -55,6 +52,19 @@ legend.y.intersp <- 1
 legend.x.intersp <- 1
 legend.pt.cex <- 3
 file.output <- TRUE
+file <- args[3]
+dpi <- 300
+
+if (file=="jpg") {
+  jpeg(paste("GC Plot.jpg"), width = 9*dpi,height=7*dpi,res=dpi,quality = 100) 
+} else if (file=="pdf") {
+  pdf(paste("GC Plot.pdf"), width = 9,height=7)
+} else if (file=="tiff") {
+  tiff(paste("GC Plot.tiff"), width = 9*dpi,height=7*dpi,res=dpi)
+} else {
+  png(paste("GC Plot.png"), width = 9*dpi,height=7*dpi,res=dpi,quality = 100)
+}
+par(xpd=TRUE)
 
 if(plot)	plot(NULL, xlim=c(0, chorm.maxlen + chorm.maxlen/10), ylim=c(0, length(chr.num) * band + band), main=main,axes=FALSE, xlab="", ylab="", xaxs="i", yaxs="i")
 pos.x <- list()
@@ -111,4 +121,4 @@ legend.col <- col[seq(10,90,5)]
 if(plot)	legend("bottomright", title="GC %", legend=legend.y, pch=15, pt.cex = legend.pt.cex, col=legend.col,
                 cex=legend.cex, bty="n", y.intersp=legend.y.intersp, x.intersp=legend.x.intersp, yjust=0, xjust=0, xpd=TRUE)
 
-
+dev.off()
