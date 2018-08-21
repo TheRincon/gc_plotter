@@ -98,7 +98,7 @@ This will then genrate something like this:
 
 <p align="center">
 <a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/figures/knufia_circ.png">
-<img src="figures/knufia_circ.png" height="800px" width="800px">
+<img src="figures/knufia_circ.png" height="600px" width="800px">
 </a>
 </p>
 
