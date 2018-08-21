@@ -102,7 +102,7 @@ This will then genrate something like this:
 </a>
 </p>
 
-The figure above is purposefully enlarged to show the small contigs, normally the spacing will not be so explicit on the legend. 
+The figure above is purposefully enlarged to show the small contigs. Normally, the spacing will not be so explicit on the legend. 
 
 ---
 
@@ -112,10 +112,12 @@ The legend can be freely changed in the linear plot, simply replace "topright" o
 
 If grey boxes appear in the plot, the bin is probably too high (around 50k or over is seems to fail). It will require modification, as I usually work with fungal genomes of about 15-100Mb, so it is optimized for this range. 
 
+The title must be changed by hand in the plot Rscript. It will be under paste("..."), just search for this string in the file. 
+
 ---
 
 ### To Do
 
 1. Make the legend more "publication worthy", as it looks very simple now. 
-2. Add "title" option. User will pass a third argument and this will be the title of the plot. 
+2. Add "title" option. User should be able to pass an argument. 
 3. Gene density plots? 
