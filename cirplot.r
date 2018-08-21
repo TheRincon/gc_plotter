@@ -180,8 +180,8 @@ segments(
 legend(
   75,
   1,
-  title="GC %", legend=legend.y, pch=15, pt.cex = 1, col = legend.col,
-  cex=0.5, bty="n",
+  title="GC %", legend=legend.y, pch=15, pt.cex = 3, col = legend.col,
+  cex=1, bty="n",
   y.intersp=1,
   x.intersp=1,
   yjust=0.5, xjust=0, xpd=TRUE
@@ -203,10 +203,10 @@ segments(
   col=col2.seg, lwd=0.8
 )
 legend(
-  86,
+  89,
   1,
-  title="Mask %", legend=legend2.y, pch=15, pt.cex = 1, col = legend2.col,
-  cex=0.5, bty="n",
+  title="Mask %", legend=legend2.y, pch=15, pt.cex = 3, col = legend2.col,
+  cex=1, bty="n",
   y.intersp=1,
   x.intersp=1,
   yjust=0.5, xjust=0, xpd=TRUE
