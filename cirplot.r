@@ -20,7 +20,7 @@ legend.max <- 100
 
 #Change colors here
 col <- c("black", "red", "orange", "yellow", "darkgreen", "grey4")
-col2 <- c("black", "green", "yellow")
+col2 <- c("black", "skyblue", "green", "yellow")
 col.seg <- NULL
 col2.seg <- NULL
 width <- 5

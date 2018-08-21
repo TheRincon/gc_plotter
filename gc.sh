@@ -15,13 +15,13 @@ bedtools nuc -fi $1 -pattern ata -bed $1_$2bps.bed > $1_nuc.txt
 # gwak and print only the bases we need in nice way
 gawk -v w=$2 'BEGIN{FS="\t"; OFS="\t"} { if (FNR>1) {print $1,$2,$3,"GC_pc"w"bps",$5} }' $1_nuc.txt > $1_$2bps.igv
 
-# horizontal ideograms   ->  Rscript gcplot.r test.fasta_1000bps.igv 1000
+# horizontal ideograms   ->  Rscript gcplot.r test.fasta_1000bps.igv 1000 jpg
 if [ $3 = "d" ]
 then
 	Rscript gcplot.r $1_$2bps.igv $2 $4
 fi
 
-# circular plot   ->  Rscript cirplot.r test.fasta jpg 10000 masked.fasta_10000bps.igv
+# circular plot   ->  Rscript cirplot.r test.fasta 10000 jpg masked.fasta_10000bps.igv
 if [ $3 = "c" ]
 then
 	samtools faidx $5
@@ -31,4 +31,3 @@ then
 	gawk -v w=$2 'BEGIN{FS="\t"; OFS="\t"} { if (FNR>1) {print $1,$2,$3,"GC_pc"w"bps",$5,$10} }' $5_nuc.txt > $5_$2bps.igv
 	Rscript cirplot.r $1_$2bps.igv $2 $4 $5_$2bps.igv
 fi
-
