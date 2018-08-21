@@ -94,7 +94,7 @@ The full command line for the circular plot:
 ```bash
 ./gc.sh /home/knufia.genome.fasta 10000 c /home/Desktop/knufia.hard_masked.fasta
 ```
-This will then genrate something like this:
+This will then generate something like this:
 
 <p align="center">
 <a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/figures/knufia_circ.png">
