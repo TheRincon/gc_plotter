@@ -22,9 +22,10 @@ chmod 755 gc.sh
 #### Linux
 Change the script from #!/bin/bash to /usr/bin/bash or appropriate shell. 
 
-Then run the script with 2 arguments, first is the reference genome fasta and the second is the desired width to scan for GC percenatge. 
+Then run the script with 3 arguments for the "linear" form, first is the reference genome fasta, the second is the desired width to scan for GC percenatge, "d" is for density plot (linear plot), and "jpg" for the file type. The filetype can be "jpg", "pdf", "tiff", or "png" (default).
+
 ```bash
-./gc /home/reference.fasta 1000
+./gc /home/reference.fasta 1000 d jpg
 ```
 The following files will be created in the directory which has the reference genome:
 
@@ -92,7 +93,7 @@ python mask.py soft-masked.fasta
 
 The full command line for the circular plot:
 ```bash
-./gc.sh /home/knufia.genome.fasta 10000 c /home/Desktop/knufia.hard_masked.fasta
+./gc.sh /home/knufia.genome.fasta 10000 c jpg /home/Desktop/knufia.hard_masked.fasta
 ```
 This will then generate something like this:
 
@@ -120,4 +121,7 @@ The title must be changed by hand in the plot Rscript. It will be under paste(".
 
 1. Make the legend more "publication worthy", as it looks very simple now. 
 2. Add "title" option. User should be able to pass an argument. 
-3. Gene density plots? 
+3. Gene density plots?
+4. Add a scale for size in b/n the plots on circular.
+5. mkdir tmp_$DATE and rm after use, unless the user wants to keep the files with "k" option.
+6. Proper options flags for bash?
