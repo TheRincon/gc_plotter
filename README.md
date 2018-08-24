@@ -27,7 +27,7 @@ R is a statistical programming language. Please download and install from [here]
 ### bedtools
 
 Finally, we have [bedtools](https://bedtools.readthedocs.io/en/latest/content/installation.html)
-Bedtools makes the windows and counts nucleotides occurences in the fasta file. 
+. Bedtools makes the windows and counts nucleotides occurences in the fasta file. 
 
 ---
 
