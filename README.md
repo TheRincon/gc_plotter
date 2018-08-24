@@ -7,11 +7,33 @@ Inspired by (and code taken from) [CMplot](https://github.com/YinLiLin/R-CMplot)
 <br>
 The Unix commands for creating GC content tracks also have been taken from [here](https://wiki.bits.vib.be/index.php/Create_a_GC_content_track)
 
+GC_PLOTTER came from the idea that ascomycetes and basidiomycetes fungal genomes contain unusual changes called Repeat-Induced Point mutations (RIP). Tools like [OcculterCut](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4943192/#evw121-B11) can identify RIP areas, but visualization is lacking. In addition, GC_PLOTTER does essentially the same thing as the vanilla OcculterCut run, with a finer level of detail (genome regions by any window size of the users choosing, with the location on the genome), in 5 lines of bash. 
+
+Plotting is done as part of the R package (OcculterCut needs a separate GNUplot call). As long as R, bedtools, and samtools are installed it should work on any unix-like system, as the only other dependencies are basic unix tools.
+
+---
+
+### Install Dependencies
+
+#### samtools
+
+Most likely one will already have [samtools](http://www.htslib.org/) installed if you are doing almost any bioinformatics. If not, please install from [here](http://www.htslib.org/download/). 
+
+#### R package
+
+R is a statistical programming language. Please download and install from [here](http://archive.linux.duke.edu/cran/) .
+
+
+### bedtools
+
+Finally, we have [bedtools](https://bedtools.readthedocs.io/en/latest/content/installation.html)
+Bedtools makes the windows and counts nucleotides occurences in the fasta file. 
+
 ---
 
 ### Run
 
-#### You must have bedtools, samtools and basic unix utils installed
+#### You must have bedtools, samtools, R, and basic unix utils installed
 
 Simply change the script to executable
 
@@ -125,3 +147,4 @@ The title must be changed by hand in the plot Rscript. It will be under paste(".
 4. Add a scale for size in b/n the plots on circular.
 5. mkdir tmp_$DATE and rm after use, unless the user wants to keep the files with "k" option.
 6. Proper options flags for bash?
+7. Add histo.r for histogram and further overlap OcculterCut. 
