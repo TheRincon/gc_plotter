@@ -21,6 +21,13 @@ then
 	Rscript gcplot.r $1_$2bps.igv $2 $4
 fi
 
+# plot histogram and get table of gc bins, takes igv and two colors as input
+if [ $3 = "h" ]
+then
+	Rscript histo.r $1_$2bps.igv blue black > gc_table.txt
+fi
+
+
 # circular plot   ->  Rscript cirplot.r test.fasta 10000 jpg masked.fasta_10000bps.igv
 if [ $3 = "c" ]
 then
@@ -31,3 +38,5 @@ then
 	gawk -v w=$2 'BEGIN{FS="\t"; OFS="\t"} { if (FNR>1) {print $1,$2,$3,"GC_pc"w"bps",$5,$10} }' $5_nuc.txt > $5_$2bps.igv
 	Rscript cirplot.r $1_$2bps.igv $2 $4 $5_$2bps.igv
 fi
+
+# tmpdir=`mktemp -d 2>/dev/null || mktemp -d -t 'tmpdir'`
