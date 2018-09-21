@@ -187,13 +187,13 @@ legend(
   yjust=0.5, xjust=0, xpd=TRUE
 )
 
-#ticks1=1.4*(RR+cir.chr.h)*sin(2*pi*(ticks-round(band/2))/TotalN)
-#ticks2=1.4*(RR+cir.chr.h)*cos(2*pi*(ticks-round(band/2))/TotalN)
+# ticks1=1.4*(RR+cir.chr.h)*sin(2*pi*(ticks-round(band/2))/TotalN)
+# ticks2=1.4*(RR+cir.chr.h)*cos(2*pi*(ticks-round(band/2))/TotalN)
 
-#for(i in 1:length(ticks)){
-  #angle=360*(1-(ticks-round(band/2))[i]/TotalN)
-  #text(ticks1[i],ticks2[i],chr.labels[i],srt=angle,font=2, cex=0.6)
-#}
+# for(i in 1:length(ticks)){
+  # angle=360*(1-(ticks-round(band/2))[i]/TotalN)
+  # text(ticks1[i],ticks2[i],chr.labels[i],srt=angle,font=2, cex=0.6)
+# }
 
 segments(
   (8*cir.band+RI)*sin(2*pi*(pvalue.posN-round(band/2))/TotalN),
