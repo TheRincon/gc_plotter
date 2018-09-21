@@ -24,7 +24,7 @@ fi
 # plot histogram and get table of gc bins, takes igv and two colors as input
 if [ $3 = "h" ]
 then
-	Rscript histo.r $1_$2bps.igv blue black > gc_table.txt
+	Rscript histo.r $1_$2bps.igv $4 $5 > gc_table.txt
 fi
 
 

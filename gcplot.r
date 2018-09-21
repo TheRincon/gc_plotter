@@ -35,7 +35,7 @@ chorm.maxlen <- max(pos)
 # Assign Variables for plotting
 plot <- TRUE
 band <- 3
-main <- "GC Content Percentage"
+main <- "Knufia GC Content Percentage"
 maxbin.num <- NULL
 bin <- args[2]
 
@@ -43,7 +43,7 @@ bin <- args[2]
 legend.max <- 100
 
 #Change colors here
-col <- c("grey4", "red", "yellow", "darkgreen", "black")
+col <- c("grey4", "red", "orange", "yellow", "darkgreen", "black")
 col.seg <- NULL
 width <- 5
 legend.len <- 100
