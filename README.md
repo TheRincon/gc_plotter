@@ -120,8 +120,8 @@ The full command line for the circular plot:
 This will then generate something like this:
 
 <p align="center">
-<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/figures/knufia_polished.jpg">
-<img src="figures/knufia_polished.jpg" height="600px" width="800px">
+<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/figures/Knufia_polished.jpg">
+<img src="figures/Knufia_polished.jpg" height="600px" width="800px">
 </a>
 </p>
 
