@@ -129,6 +129,21 @@ The figure above is purposefully enlarged to show the small contigs. Normally, t
 
 ---
 
+Finally, there is a histogram function to see what the bins are graphically.
+
+```bash
+/path/to/gc.sh exophiala.genome.fasta 1000 h green black
+```
+<p align="center">
+<a href="https://raw.githubusercontent.com/TheRincon/gc_plotter/figures/Exo_1000.png">
+<img src="figures/Exo_1000.png" height="600px" width="800px">
+</a>
+</p>
+
+This also includes a table with the data for use in other contexts.
+
+---
+
 ### Hints
 
 The legend can be freely changed in the linear plot, simply replace "topright" or "bottomright" on the last line in gcplot.r to another location or coordinates. The colors can easily be changed within the Rscript under col (or col2 in case of the circular plot). 
