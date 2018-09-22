@@ -129,7 +129,7 @@ The figure above is purposefully enlarged to show the small contigs. Normally, t
 
 ---
 
-Finally, there is a histogram function to see what the bins are graphically.
+Finally, there is a histogram function to see what the bins are graphically. If you would like to use the "histoplot" please install ggplot2 from R. (install.packages(""ggplot2")). 
 
 ```bash
 /path/to/gc.sh exophiala.genome.fasta 1000 h green black
@@ -162,4 +162,3 @@ The title must be changed by hand in the plot Rscript. It will be under paste(".
 4. Add a scale for size in b/n the plots on circular.
 5. mkdir tmp_$DATE and rm after use, unless the user wants to keep the files with "k" option.
 6. Proper options flags for bash?
-7. Add histo.r for histogram and further overlap OcculterCut. 
