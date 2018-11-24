@@ -148,9 +148,9 @@ This also includes a table with the data for use in other contexts.
 
 The legend can be freely changed in the linear plot, simply replace "topright" or "bottomright" on the last line in gcplot.r to another location or coordinates. The colors can easily be changed within the Rscript under col (or col2 in case of the circular plot). 
 
-If grey boxes appear in the plot, the bin is probably too high (around 50k or over is seems to fail). It will require modification, as I usually work with fungal genomes of about 15-100Mb, so it is optimized for this range. 
+If grey boxes appear in the plot, the bin is probably too high (around 50k or over is seems to fail). Set the bin or "window" size lower. Usually 1 order of magnitude lower will work, i.e. 100000 => 10000. It will require modification, as I usually work with fungal genomes of about 15-100Mb, so it is optimized for this range. 
 
-The title must be changed by hand in the plot Rscript. It will be under paste("..."), just search for this string in the file. 
+The title must be changed by hand (for now) in the plot Rscript. It will be under paste("..."), just search for this string in the file. 
 
 ---
 
