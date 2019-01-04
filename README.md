@@ -107,7 +107,7 @@ We can also try a slightly larger genome to see if it scales:
 
 ### Circular Plot
 
-I have now added circular plots. It has an extended command on the terminal taking a hard-masked fasta. If you have a soft-masked fasta ("atcg" instead of "ATCG") then please run the "mask.py" script.
+I have now added circular plots. It has an extended command on the terminal taking a hard-masked fasta. If you have a soft-masked fasta ("atcg" instead of "ATCG") then please run the "mask.py" script to coerce to hardmasked. I suppose it might be possible to use either, this feature will be added later.
 
 ```python
 python mask.py soft-masked.fasta
@@ -158,7 +158,8 @@ The title must be changed by hand (for now) in the plot Rscript. It will be unde
 
 1. Make the legend more "publication worthy", as it looks very simple now. 
 2. Add "title" option. User should be able to pass an argument. 
-3. Gene density plots?
+3. Gene density plots as another plot option/function?
 4. Add a scale for size in b/n the plots on circular.
 5. mkdir tmp_$DATE and rm after use, unless the user wants to keep the files with "k" option.
 6. Proper options flags for bash?
+7. Hard and softmasking plot options. 
