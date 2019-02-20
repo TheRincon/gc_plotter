@@ -54,7 +54,7 @@ if (file=="jpg") {
 } else if (file=="tiff") {
   tiff(paste("Circular GC and Mask Plot.tiff"), width = 9*dpi,height=7*dpi,res=dpi)
 } else {
-  png(paste("Circular GC and Mask Plot.png"), width = 9*dpi,height=7*dpi,res=dpi,quality = 100)
+  png(paste("Circular GC and Mask Plot.png"), width = 9*dpi,height=7*dpi,res=dpi)
 }
 par(xpd=TRUE)
 
