@@ -3,7 +3,7 @@ gc_plotter
 
 ## Simple tool to map GC bins on chromosome ideograms with existing tools
 
-Inspired by (and code taken from) [CMplot](https://github.com/YinLiLin/R-CMplot)
+Inspired by (and code directly taken from) [CMplot](https://github.com/YinLiLin/R-CMplot)
 <br>
 The Unix commands for creating GC content tracks also have been taken from [here](https://wiki.bits.vib.be/index.php/Create_a_GC_content_track)
 
@@ -19,7 +19,7 @@ Plotting is done as part of the R package (OcculterCut needs a separate GNUplot 
 
 Most likely one will already have [samtools](http://www.htslib.org/) installed if you are doing almost any bioinformatics. If not, please install from [here](http://www.htslib.org/download/). 
 
-#### R package
+#### R programming language
 
 R is a statistical programming language. Please download and install from [here](http://archive.linux.duke.edu/cran/) .
 
@@ -27,7 +27,7 @@ R is a statistical programming language. Please download and install from [here]
 ### bedtools
 
 Finally, we have [bedtools](https://bedtools.readthedocs.io/en/latest/content/installation.html)
-. Bedtools makes the windows and counts nucleotides occurences in the fasta file. 
+. The Bedtools package makes the windows and counts nucleotides occurrences in the fasta file. 
 
 ---
 
